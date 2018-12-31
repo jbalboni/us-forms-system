@@ -22,7 +22,7 @@ export default function ExpandingGroup({
   );
 
   return (
-    <div className={classNames}>
+    <div className={classNames} role="status" aria-live="polite" aria-relevant="additions" aria-atomic="false">
       {children[0]}
       <ReactCSSTransitionGroup id={expandedContentId} transitionName="form-expanding-group-inner" transitionEnterTimeout={700} transitionLeave={false}>
         {open
